@@ -2,13 +2,11 @@
 # import the required libraries
 from gpiozero import Button, TrafficLights, Buzzer    
 from time import sleep    
-
 #buzzer for alarm    
 buzzer = Buzzer(15)
 button = Button(21)
 # pin cofigurations for Traffic Lights (Red,Green,Amber)
 lights = TrafficLights(25, 8, 7)    
-
 # iterate the loop statements.   
 while True:    
            button.wait_for_press()   

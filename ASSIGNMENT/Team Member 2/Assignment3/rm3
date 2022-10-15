@@ -22,4 +22,3 @@ while True:
            lights.off()   
            buzzer.off()
 #end of the program
-

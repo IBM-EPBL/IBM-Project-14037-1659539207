@@ -7,3 +7,4 @@ while (1):
     if temp>60:
         print("ALERT!! Detected temperature: "+str(temp)+"°C")
         time.sleep(1)
+        

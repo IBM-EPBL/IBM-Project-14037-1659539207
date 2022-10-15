@@ -1,6 +1,5 @@
 int trigger=2;
 int echo=3;
-
 void setup()
 {
   Serial.begin(9600);
@@ -8,7 +7,6 @@ void setup()
   pinMode(echo,INPUT);
   pinMode(12,OUTPUT);
 }
-
 void loop()
 {
   //Measuring the distance for alerting
@@ -20,14 +18,12 @@ void loop()
   float dis=(dur*0.0343)/2;
   Serial.print("Distance is: ");
   Serial.println(dis);
-
   //Turining on LED for Alert
   if(dis>=100)
   {
     digitalWrite(8,HIGH);
     digitalWrite(7,HIGH);
   }
-
   //Buzering for Ultrasonic Sensor Alert
   if(dis>=100){
      for(int i=0; i<=30000; i=i+10){
@@ -49,7 +45,6 @@ void loop()
     digitalWrite(8,HIGH);
     digitalWrite(7,HIGH);
   }
-
   //BUZZER FOR TURNING TEMPERATURE
   if(t>=100)
   {
@@ -61,7 +56,6 @@ void loop()
   delay(1000);
   }
   }
-
    //TO OFF THE LED
   if(t<100)
   {
